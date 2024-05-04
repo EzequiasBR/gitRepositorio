@@ -1,0 +1,62 @@
+body {
+   padding: 0;
+   margin: 0;
+}
+
+.table {
+   width: 840px;
+   height: auto;
+   margin-left: 22px;
+   margin-top: 20px;
+}
+
+.link {
+   text-decoration: none;
+   border-radius: 5px;
+   color: black;
+   background-color: aqua;
+}
+
+.link:hover{
+   background-color: red;
+   color: white;
+}
+
+.link-table {
+   text-decoration: none;
+   border-radius: 5px;
+   color: rgb(0, 0, 0);
+   background-color: rgb(255, 255, 255);
+   padding-left: 4px;
+   padding-right: 4px;
+   font-weight: bold;
+}
+
+.link-table:hover{
+   background-color: rgb(252, 0, 0);
+   color: rgb(253, 253, 253);
+   cursor: pointer;
+}
+
+.form-group {
+   width: 600px;
+}
+
+.flex{
+   min-height: 90vh;
+   background-color:transparent;
+   width: 100%;
+   margin-top: 0;
+}
+
+.alerta{
+   width: 450px !important;
+   height: auto !important;
+   border-radius: 15px !important;
+   text-align: center !important;
+   border: 2px solid red !important;
+}
+
+.alerta a{
+   margin-bottom: 5px;
+}

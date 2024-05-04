@@ -1,0 +1,50 @@
+body {
+   font-family: sans-serif;
+   margin: 20px;
+}
+
+#container {
+   width: 800px;
+   margin: 0 auto;
+}
+
+h1 {
+   text-align: center;
+}
+
+#neuron {
+   float: left;
+   margin-right: 20px;
+}
+
+#neuron img{
+  width: 75px;
+}
+
+#dopamine {
+   float: left;
+   width: 300px;
+}
+
+#dopamine-chart {
+   width: 100%;
+   height: 200px;
+}
+
+#controls {
+   float: left;
+   margin-top: 20px;
+}
+
+#firing-rate {
+   width: 200px;
+}
+
+#simulate {
+   margin-left: 20px;
+}
+
+#info {
+   clear: both;
+   margin-top: 20px;
+}

@@ -1,0 +1,322 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppings', sans-serif;
+}
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background-color: rgb(3, 3, 49);
+}
+
+
+#caixa {
+   text-align: center;
+   color: white;
+}
+
+.caixa-canvas {
+   display: flex;
+   flex-direction: row;
+}
+
+.canvas {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   padding-top: 1.5rem;
+   align-items: center;
+}
+
+div.dialogo {
+   display: flex;
+   position: absolute;
+   top: 0;
+   font-size: 12pt;
+   font-weight: 300;
+   padding: 0;
+}
+
+.melhor-score {
+   flex-direction: column;
+   margin-left: 2rem;
+   width: 300px;
+}
+
+.melhor-score h3 {
+   font-size: 16pt;
+   font-weight: 600;
+   margin-top: 2rem;
+}
+
+.resultado {
+   margin-top: .3rem;
+   display: flex;
+   flex-direction: column;
+   padding-top: .2rem;
+}
+
+.resultado span {
+   padding: .45rem;
+   background-color: black;
+   font-size: 13pt;
+   font-weight: 400;
+   margin-top: .3rem;
+   text-align: left;
+}
+
+#tela {
+   background-color: rgb(24, 23, 23);
+   margin-top: 10px;
+   border: 2px solid white;
+   filter: blur(3px);
+}
+
+.score {
+   font-size: 20pt;
+   display: flex;
+   flex-direction: column;
+   margin-top: .5rem;
+}
+
+.score--value {
+   font-weight: 600;
+   font-size: 3rem;
+   margin-top: -10px;
+   display: block;
+}
+
+/* GAME OVER */
+#menu-tela {
+   top: 30%;
+   width: 100%;
+   position: absolute;
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   color: rgb(255, 255, 255);
+   z-index: 1;
+}
+
+.game-over {
+   text-transform: uppercase;
+   font-weight: 700;
+   font-size: 2.8rem;
+}
+
+.final-score {
+   font-weight: 700;
+   font-size: 1.7rem;
+}
+
+.final-score span {
+   font-size: 1.5rem;
+}
+
+.btn-jogar {
+   border: none;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 3px;
+   margin-top: 1rem;
+   padding: 4px 3px;
+   font-weight: 700;
+   font-size: 1rem;
+   color: rgb(63, 62, 62);
+   cursor: pointer;
+}
+
+/* Iniciar Jogo */
+.jogar-tela {
+   top: 30%;
+   width: 100%;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   color: rgb(255, 255, 255);
+   z-index: 1;
+}
+
+.jogar-tela h2 {
+   font-size: 20pt;
+   font-weight: 600;
+}
+
+.jogar-tela label {
+   font-size: 14pt;
+   font-weight: 600;
+   margin-top: 1rem;
+}
+
+#nomeInput {
+   font-size: 14pt;
+   margin-top: .5rem;
+   width: 300px;
+   padding: 0 5px;
+}
+
+.btn-iniciarJogo {
+   border: none;
+   border-radius: 12px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 3px;
+   margin-top: 1.5rem;
+   padding: 4px 5px;
+   font-weight: 700;
+   font-size: 1.5rem;
+   color: rgb(63, 62, 62);
+   cursor: pointer;
+}
+
+/* Controlar tela */
+.btn-almentar{
+   display: none;
+   position: absolute;
+}
+
+.btn-diminuir {
+   display: none;
+   position: absolute;
+}
+
+
+
+
+/* Estilos para telas menores (menos de 600px) */
+@media (max-width: 600px) {
+   body {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1em;
+      font-weight: 200;
+      font-size: 10pt;
+   }
+
+   .caixa-canvas {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .caixa-canvas h1 {
+      font-size: 16pt;
+   }
+
+   .canvas, .melhor-score {
+      width: 100%;
+      max-width: 300px;
+   }
+
+   .melhor-score {
+      margin-left: 0;
+      display: none;
+      flex-direction: column;
+   }
+
+   .melhor-score h3 {
+      margin-left: 0;
+      margin-top: 1.5rem;
+      font-size: 12pt;
+   }
+
+   #tela {
+      max-width: 100%;
+      height: auto;
+   }
+
+   #nomeInput {
+      width: 100%;
+   }
+
+   .btn-almentar {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: transparent;
+      color: red;
+      border: none;
+   }
+
+   button.alterar{
+     display: flex;
+   }
+
+   .btn-diminuir {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: transparent;
+      color: red;
+      border: none;
+   }
+
+   .score {
+      position: relative;
+      width: 100%;
+      font-size: 16pt;
+      display: flex;
+      margin-top: 1rem;
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 0;
+   }
+
+   .score--value {
+      font-weight: 300;
+      font-size: 1.4rem;
+      margin: 0;
+      display: block;
+   }
+
+   #score-resultado {
+      margin-top: .5rem;
+      width: 100%;
+      padding: 0;
+      height: 50px;
+      position: relative;
+      outline: 2px solid black;
+      overflow: hidden;
+   }
+
+   .resultado {
+    width: 100%;
+    padding: 0 2px;
+    box-shadow: 10px 10px 5px black;
+   }
+
+   .resultado span {
+     position: relative;
+     font-size:12pt ;
+     width: 100% ;
+     height: 40px;
+     margin: .15rem 0 ;
+     animation: carousel 20s infinite ease-in-out;
+   }
+
+   @keyframes carousel {
+      0% {top: 0px;}
+    10% {top: -40px;}
+    20% {top: -80px;}
+    30% {top: -120px;}
+    40% {top: -160px;}
+    50% {top: -200px;}
+    60% {top: -240px;}
+    70% {top: -280px;}
+    80% {top: -320px;}
+    85% {top: -360px;}
+    90% {top: -400px;}
+    95% {top: -400px;}
+    100% {top: 0px;}
+  }
+  
+}

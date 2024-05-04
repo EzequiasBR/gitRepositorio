@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+   <title>Document</title>
+</head>
+
+<body>
+   <button onclick="executar()">Executar</button>
+   <div id="data"></div>
+   <img src="" id="avatar">
+   <script>
+      //   import axios from './axios';
+
+      function executar() {
+
+         // Make a request for a user with a given ID
+         axios.get('https://reqres.in/api/users/1')
+            .then(function (response) {
+               // handle success
+               console.log(response);
+               document.getElementById('data').innerText = response.data.data.first_name + ' '+ response.data.data.last_name;
+               document.getElementById('avatar').src = response.data.data.avatar
+            })
+            .catch(function (error) {
+               // handle error
+               console.log(error);
+            })
+            .finally(function () {
+               // always executed
+               console.log('Terminado')
+            });
+      }
+
+   </script>
+</body>
+
+</html>

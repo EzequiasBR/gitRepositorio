@@ -1,0 +1,13 @@
+.estilo1{
+   font-family: sans-serif;
+   color: blue;
+   top: 20%;
+   left: 70%;
+   font-size: 3em;
+   position: absolute;
+}
+
+.estilo2{
+   color: red;
+   text-justify: auto;
+}

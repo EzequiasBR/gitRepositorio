@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="../assets/loader.js"></script>
+   <title>Document</title>
+</head>
+<body>
+    
+   <h3>Género do Grupo</h3>
+   <div id="chart"></div>
+
+   <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(desenhar);
+
+      function desenhar(){
+         let dados = new google.visualization.DataTable();
+         dados.addColumn('string','Generos');
+         dados.addColumn('number','Totais');
+         dados.addRows([
+               ['Masculino', 50],
+               ['Feminino', 60]
+         ]);
+
+         let opcoes = {
+            width: 500,
+            height: 400,
+            colors: ['ff0000','ff15ff'],
+            chartArea:{
+               widht:'100%',
+               height:'100%'
+            },
+            is3D: true
+         }
+
+         let chart = new google.visualization.PieChart(document.getElementById('chart'));
+         chart.draw(dados,opcoes);
+
+      }
+   </script>
+</body>
+</html>
