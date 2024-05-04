@@ -1,11 +1,11 @@
 <?php 
 class Gestor
 {    
-    private $db_server = 'localhost';
-    private $db_name = 'usuarios';
+    private $db_server = '';
+    private $db_name = '';
     private $db_charset = 'utf8';
-    private $db_username = 'usuarios_user';
-    PRIVATE $db_password = 'abc123';
+    private $db_username = '';
+    PRIVATE $db_password = '';
     
     //==================================================================
     public function EXE_QUERY($query, $parameters = null, $debug = true, $close_connection = true){
