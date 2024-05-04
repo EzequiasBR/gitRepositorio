@@ -4,8 +4,8 @@ class Gestor
     private $db_server = 'localhost';
     private $db_name = 'news_letter';
     private $db_charset = 'utf8';
-    private $db_username = 'root';
-    PRIVATE $db_password = 'abc123';
+    private $db_username = '';
+    PRIVATE $db_password = '';
     
     //==================================================================
     public function EXE_QUERY($query, $parameters = null, $debug = true, $close_connection = true){
