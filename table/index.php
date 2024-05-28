@@ -1,21 +1,9 @@
 <?php
+include 'gestor.php';
+$gestor = new Gestor();
 
-//CRIE TABELA DE CLIENTES  
+$cursos = $gestor->EXE_QUERY("SELECT * FROM  cursos");
 
-$num_clientes = 200;
-$dominios = array('@gmail.com', '@hotmail.com', '@yahoo.com');
-$paises = array('Portugal', 'Brasil', 'Angola', 'Canadá', 'França');
-
-$dados = array();
-for ($i = 0; $i < $num_clientes; $i++) {
-   $clientes = array(
-      'nome' => 'Cliente' . $i,
-      'telemovel' => rand(100000000, 999999999),
-      'email' => 'cliente' . $i . $dominios[rand(0, count($dominios) - 1)],
-      'nacionalidade' => $paises[rand(0, count($paises) - 1)]
-   );
-   array_push($dados, $clientes);
-}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -28,26 +16,26 @@ for ($i = 0; $i < $num_clientes; $i++) {
 </head>
 
 <body>
-
+   
    <div class="container mb-5">
       <h1>CLIENTES</h1>
+      <hr>
+      <p><a href="add_curso.php">Adicionar Curso</a></p>
       <hr>
       <table id="tabela" class="table table-bordered text-center">
          <thead class="thead-dark">
             <tr>
-               <th>Nome do cliente</th>
-               <th>Telemovel</th>
-               <th>Email</th>
-               <th>Nacionalidade</th>
+               <th>ID</th>
+               <th>Nome do curso</th>
+               <th>Link do curso</th>
             </tr>
          </thead>
          <tbody>
-            <?php foreach ($dados as $clientes) : ?>
+            <?php foreach ($cursos as $curso) : ?>
                <tr>
-                  <th><?php echo $clientes['nome'] ?></th>
-                  <th class="text-center"><?php echo $clientes['telemovel'] ?></th>
-                  <th><?php echo $clientes['email'] ?></th>
-                  <th><?php echo $clientes['nacionalidade'] ?></th>
+                  <th><?php echo $curso['id_curso'] ?></th>
+                  <th class="text-center"><?php echo $curso['nome_curso'] ?></th>
+                  <th><a href="<?php echo $curso['link_curso'] ?>" target="_blank">Ir para o curso</a></th>
                </tr>
             <?php endforeach; ?>
          </tbody>
